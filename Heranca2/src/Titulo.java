@@ -25,4 +25,11 @@ public class Titulo {
     public void setAno(int ano) {
         this.ano = ano;
     }
+
+    public void mostrarDadosComuns() {
+        System.out.println("Titulo: " + nome + ", ano: " + ano + "");
+    }
+
+    public void mostrarDados() {
+    }
 }

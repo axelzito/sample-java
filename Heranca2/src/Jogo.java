@@ -1,4 +1,5 @@
-
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Jogo extends Titulo {
 
@@ -6,6 +7,10 @@ public class Jogo extends Titulo {
     private double duracao;
     private String comentarios, plataforma;
     private int numJogadores;
+
+    SimpleDateFormat df = new SimpleDateFormat("HH:mm:ss");
+    Date hora = new Date();
+
 
     public Jogo (String nome, int ano, String plataforma, int numJogadores, double duracao, String comentarios) {
 
@@ -46,5 +51,10 @@ public class Jogo extends Titulo {
 
     public void setNumJogadores(int numJogadores) {
         this.numJogadores = numJogadores;
+    }
+
+    public void mostrarDados() {
+        System.out.println("Numero de jogadores: " + numJogadores + " Plataforma: "
+                + plataforma + " Duração: " + duracao + " minutos Comentarios: " + comentarios);
     }
 }

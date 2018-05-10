@@ -46,7 +46,7 @@ public class Cd extends Titulo {
         this.qtdFaixas = qtdFaixas;
     }
 
-    /*public String  retornaNome(){
-        return getArtista();
-    }*/
+    public void mostrarDados(){
+        System.out.println("Artista: " + artista + " Quantidade de faixas " + qtdFaixas + " Duração " + duracao + " minutos");
+    }
 }
