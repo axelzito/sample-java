@@ -1,3 +1,6 @@
+// Autor: Axel Miguez   email: axel.ataides@gmail.com
+// Main questão 1 lista 3
+
 public class MainComplexo {
 
     public static void main (String[] args) {

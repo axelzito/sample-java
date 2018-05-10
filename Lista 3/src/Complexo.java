@@ -1,3 +1,6 @@
+// Autor: Axel Miguez   email: axel.ataides@gmail.com
+// Classe questão 1 lista 3
+
 import static java.lang.Math.sqrt;
 
 public class Complexo {
@@ -8,22 +11,6 @@ public class Complexo {
     private double parteReal, parteImaginaria;
     private double i = sqrt(-1);
 
-    public double getParteReal() {
-        return parteReal;
-    }
-
-    /*public void setParteReal(double parteReal) {
-        this.parteReal = parteReal;
-    }
-
-    public double getParteImaginaria() {
-        return parteImaginaria;
-    }
-
-    public void setParteImaginaria(double parteImaginaria) {
-        this.parteImaginaria = parteImaginaria;
-    }*/
-
     public Complexo (double parteReal, double parteImaginaria) {
         this.parteReal = parteReal;
         this.parteImaginaria = parteImaginaria;
@@ -33,7 +20,6 @@ public class Complexo {
         this.parteReal = 0.0;
         this.parteImaginaria = 0.0;
     }
-
 
     // forneca um metodo para somar 2 numeros Complex
     public static Complexo somar (Complexo x, Complexo y) {
