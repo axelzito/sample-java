@@ -18,7 +18,6 @@ public class MainProva {
         }
 
         System.out.println();
-        String[] respostas = new String[10];
-        //respostas = ["b","a", "b","a", "b","a", "b","a", "b","a"];
+        String[] respostas = new String[] {"b","a", "b","a", "b","a", "b","a", "b","a"};
     }
 }
