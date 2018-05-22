@@ -10,8 +10,8 @@ comportamento, faça-o correr.
 
     private Animal[] jaulas;
 
-    public Zoologico(Animal[] jaulas) {
-        this.jaulas = jaulas;
+    public Zoologico() {
+        //this.jaulas = jaulas;
     }
 
     public Animal[] getJaulas() {

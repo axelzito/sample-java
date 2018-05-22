@@ -14,12 +14,15 @@ public class TesteAnimal {
 
         Veterinario v1 = new Veterinario();
 
-        System.out.println("\nConsultorio Zoo.Veterinario:");
+        System.out.println("\nConsultorio Veterinario:");
         v1.examinar(c1);
         v1.examinar(h1);
         v1.examinar(p1);
 
-        //arrumar essa parte
-        //Zoo.Zoologico z1 = new Zoo.Zoologico();
+        Zoologico z1 = new Zoologico();
+        Animal[] jaula = new Animal[] {c1, h1, p1};
+
+        System.out.println("\nZoologico:");
+        z1.zoo(jaula);
     }
 }
