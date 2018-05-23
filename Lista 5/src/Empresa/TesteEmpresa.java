@@ -1,24 +1,30 @@
 package Empresa;
 
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+
 public class TesteEmpresa {
 
     public static void main(String[] args){
 
-        //Funcionario[] funcionarios;
+        DecimalFormat df = new DecimalFormat("###,##0.00");
+        double total = 0;
+        ArrayList<Funcionario> funcionarios = new ArrayList<>();
 
-        FuncionarioEnsinoBasico eb1 = new FuncionarioEnsinoBasico("Ronaldo", 1, "Real Madrid");
-        FuncionarioEnsinoBasico eb2 = new FuncionarioEnsinoBasico("Ronaldo", 1, "Real Madrid");
-        FuncionarioEnsinoBasico eb3 = new FuncionarioEnsinoBasico("Ronaldo", 1, "Real Madrid");
-        FuncionarioEnsinoBasico eb4 = new FuncionarioEnsinoBasico("Ronaldo", 1, "Real Madrid");
+        funcionarios.add(new FuncionarioEnsinoBasico("Ronaldo", 1, "Real Madrid", new Vendedor()));
+        funcionarios.add(new FuncionarioEnsinoBasico("Ronaldo", 2, "Real Madrid", new Vendedor()));
+        funcionarios.add(new FuncionarioEnsinoBasico("Ronaldo", 3, "Real Madrid", new Vendedor()));
+        funcionarios.add(new FuncionarioEnsinoBasico("Ronaldo", 4, "Real Madrid", new Vendedor()));
 
-        FuncionarioEnsinoMedio em1 = new FuncionarioEnsinoMedio("Messi", 2, "Barcelona");
-        FuncionarioEnsinoMedio em2 = new FuncionarioEnsinoMedio("Messi", 2, "Barcelona");
-        FuncionarioEnsinoMedio em3 = new FuncionarioEnsinoMedio("Messi", 2, "Barcelona");
-        FuncionarioEnsinoMedio em4 = new FuncionarioEnsinoMedio("Messi", 2, "Barcelona");
+        funcionarios.add(new FuncionarioEnsinoMedio("Messi", 5, "Barcelona", new Supervisor()));
+        funcionarios.add(new FuncionarioEnsinoMedio("Messi", 6, "Barcelona", new Supervisor()));
+        funcionarios.add(new FuncionarioEnsinoMedio("Messi", 7, "Barcelona", new Supervisor()));
+        funcionarios.add(new FuncionarioEnsinoMedio("Messi", 8, "Barcelona", new Supervisor()));
 
-        FuncionarioGraduado g1 = new FuncionarioGraduado("Torres", 3, "Atletico de Madrid");
-        FuncionarioGraduado g2 = new FuncionarioGraduado("Torres", 3, "Atletico de Madrid");
+        funcionarios.add(new FuncionarioGraduado("Torres", 9, "Atletico de Madrid", new Gerente()));
+        funcionarios.add(new FuncionarioGraduado("Torres", 10, "Atletico de Madrid", new Gerente()));
 
+        /*
         System.out.println("Renda: " + eb1.calculaRenda());
         System.out.println("Renda: " + eb2.calculaRenda());
         System.out.println("Renda: " + eb3.calculaRenda());
@@ -31,5 +37,13 @@ public class TesteEmpresa {
 
         System.out.println("Renda: " + g1.calculaRenda());
         System.out.println("Renda: " + g2.calculaRenda());
+        */
+
+        for (int i = 0; i <funcionarios.size(); i++){
+            total += funcionarios.get(i).calculaRenda();
+            System.out.println(funcionarios.get(i).toString());
+        }
+
+        System.out.println("\nA folha de pagamento da empresa é: R$ " + df.format(total));
     }
 }

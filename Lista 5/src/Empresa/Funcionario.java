@@ -1,14 +1,20 @@
 package Empresa;
 
+import java.text.DecimalFormat;
+
 public class Funcionario {
 
     private String nome;
     private int id;
     private double rendaBasica = 1000;
+    public Comissao comissao;
+    //private DecimalFormat df = new DecimalFormat("###,##0.00");
 
-    public Funcionario(String nome, int id) {
+
+    public Funcionario(String nome, int id, Comissao comissao) {
         this.nome = nome;
         this.id = id;
+        this.comissao = comissao;
     }
 
     public String getNome() {
@@ -35,9 +41,20 @@ public class Funcionario {
         this.rendaBasica = rendaBasica;
     }
 
+    public Comissao getComissao() {
+        return comissao;
+    }
+
+    public void setComissao(Comissao comissao) {
+        this.comissao = comissao;
+    }
 
     public double calculaRenda(){
 
         return getRendaBasica();
+    }
+
+    public String toString(){
+        return "Nome: " + getNome() + "\nComissao: R$ " + (comissao.getComissao() + "\nSalario total: R$ " + (calculaRenda()));
     }
 }
